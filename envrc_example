@@ -1,0 +1,7 @@
+export API_KEY=
+export BASE_URI=
+export PROJECT_ID=
+export TRACKER_ID=
+export STATUS_ID=
+export PRIORITY_ID=
+export ASSIGNED_TO_ID=
