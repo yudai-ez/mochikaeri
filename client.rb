@@ -18,8 +18,13 @@ class Client
     req.body = @payload.to_json
     res = https.request(req)
 
-    result = JSON.parse(res.body)
-    system("open #{ENV["BASE_URI"]}/issues/#{result["issue"]["id"]}")
+    case res
+    when Net::HTTPSuccess
+      result = JSON.parse(res.body)
+      system("open #{ENV["BASE_URI"]}/issues/#{result["issue"]["id"]}")
+    else
+      puts res.error!
+    end
   end
 end
 
