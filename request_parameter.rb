@@ -7,7 +7,7 @@ class RequestParameter
   STATUS_ID      = ENV["STATUS_ID"]
   PRIORITY_ID    = ENV["PRIORITY_ID"]
   ASSIGNED_TO_ID = ENV["ASSIGNED_TO_ID"]
-  WDAYS = ["日", "月", "火", "水", "木", "金", "土"]
+  WDAYS = %w(日 月 火 水 木 金 土)
 
   attr_reader :params
 
