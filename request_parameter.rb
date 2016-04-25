@@ -38,6 +38,6 @@ class RequestParameter
   end
 
   def formatted_to_date
-    "#{@to_date.month}/#{@to_date.day}(#{WDAYS[@from_date.wday]})"
+    "#{@to_date.month}/#{@to_date.day}(#{WDAYS[@to_date.wday]})"
   end
 end
